@@ -5,7 +5,6 @@ RSpec.describe HomeController, type: :controller do
     it "returns a success response" do
       get :index, params: {}
       expect(response).to be_successful
-      expect(response.body).to include("Welcome to Pokemon Deck Builder")
     end
   end
 end
