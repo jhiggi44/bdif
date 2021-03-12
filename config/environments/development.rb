@@ -60,3 +60,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+
+Pokemon.configure do |config|
+  config.api_key = ENV["POKEMON_API_KEY"]
+end
