@@ -9,17 +9,15 @@ RSpec.describe CollectionsController, type: :controller do
   end
 
   describe "POST #create" do
-    before do 
-      expect(Collection.all.size).to eq(0)
-    end
+    let(:collection_title) { "A Collection Title" }
 
     it "creates a collection" do
-      post :create, params: { card_ids: [1, 2] }
-      expect(Collection.all.size).to eq(1)
+      post :create, params: { title: collection_title }
+      expect(Collection.last.title).to eq(collection_title)
     end
 
     it "redirects to collection #show" do
-      post :create, params: { card_ids: [1, 2] }
+      post :create, params: { title: collection_title }
       expect(response).to be_redirect
     end
   end
