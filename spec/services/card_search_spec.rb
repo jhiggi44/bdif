@@ -5,5 +5,5 @@ RSpec.describe CardSearch do
     card_search = CardSearch.with(nil)
 
     expect(card_search.class.name).to eq("FakeCardSearch")
-  end
+  end  
 end
