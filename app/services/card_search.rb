@@ -18,14 +18,24 @@ end
 
 class CardSearch
   def self.for(query:)
-    with(ENV["POKEMON_API_KEY"]).query(query)
+    with.query(query)
   end
 
-  def self.with(api_key)
+  def self.with(api_key: ENV["POKEMON_API_KEY"], client: Pokemon::Card)
     if api_key
-
+      CardSearch.new(client)
     else
       FakeCardSearch.new
     end
   end 
+
+  attr_reader :client
+
+  def initialize(client)
+    @client = client
+  end
+
+  def query(query)
+    client.where(q: "card.name:#{query}")
+  end
 end
