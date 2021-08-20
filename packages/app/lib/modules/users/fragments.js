@@ -1,0 +1,1 @@
+// GraphQL fragments related to the users collection
