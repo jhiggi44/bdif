@@ -9,9 +9,7 @@ const SearchModalTrigger = () => {
     setIsOpen(true);
   }
 
-  function afterOpenModal() {
-    subtitle.style.color = '#f00';
-  }
+  function afterOpenModal() { }
 
   function closeModal() {
     setIsOpen(false);
