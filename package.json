@@ -78,6 +78,7 @@
     "moment-timezone": "^0.5.31",
     "node-cache": "^5.1.2",
     "pluralize": "7.0.0",
+    "pokemontcgsdk": "^2.0.0",
     "prop-types": "^15.7.2",
     "qs": "^6.6.0",
     "react": "^16.13.1",

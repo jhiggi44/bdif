@@ -1,1 +1,1 @@
-import '../components/Home.jsx';
+// layout goes here
